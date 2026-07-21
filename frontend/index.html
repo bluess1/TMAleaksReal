@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TMA LEAKS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="corkboard">
+
+  <header class="masthead">
+    <div class="stamp">ANONYMOUS &middot; UNVERIFIED</div>
+    <h1 class="wordmark">TMA <span class="leaks-word">LEAKS</span></h1>
+    <p class="tagline">post it. own nothing. say anything.</p>
+  </header>
+
+  <section class="composer-wrap">
+    <div class="composer index-card">
+      <div class="card-tape"></div>
+      <label for="postText" class="sr-only">What's the leak?</label>
+      <textarea id="postText" maxlength="2000" placeholder="type your leak..."></textarea>
+
+      <div class="composer-row">
+        <label class="file-btn" id="fileBtn">
+          <input type="file" id="postImage" accept="image/png, image/jpeg, image/webp, image/gif" hidden />
+          <span id="fileLabel">+ attach photo</span>
+        </label>
+        <button class="submit-btn" id="submitBtn">DROP IT</button>
+      </div>
+
+      <div id="imagePreviewWrap" class="image-preview-wrap" hidden>
+        <img id="imagePreview" alt="Selected image preview" />
+        <button id="removeImageBtn" type="button" class="remove-image-btn">&times;</button>
+      </div>
+
+      <p id="composerError" class="composer-error" hidden></p>
+      <p class="composer-hint">no accounts. no names. reports over 3 = auto-pulled.</p>
+    </div>
+  </section>
+
+  <main id="feed" class="feed" aria-live="polite">
+    <div id="feedEmpty" class="feed-empty" hidden>
+      <p>nothing leaked yet.</p>
+      <p class="feed-empty-sub">be the first.</p>
+    </div>
+  </main>
+
+  <div id="loadMoreWrap" class="load-more-wrap" hidden>
+    <button id="loadMoreBtn" class="load-more-btn">load more</button>
+  </div>
+
+  <footer class="site-footer">
+    <p>this board is anonymous. don't post real names, contact info, or anything you can't take back. see something bad &rarr; hit report.</p>
+  </footer>
+
+</div>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

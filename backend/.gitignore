@@ -1,0 +1,6 @@
+node_modules/
+.env
+tma-leaks.db
+tma-leaks.db-*
+uploads/*
+!uploads/.gitkeep
