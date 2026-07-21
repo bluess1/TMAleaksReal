@@ -46,7 +46,7 @@ function escapeHtml(str) {
 
 function renderPost(post) {
   const card = document.createElement('article');
-  card.className = 'post-card index-card';
+  card.className = 'post-card';
   card.dataset.id = post.id;
 
   let html = '';
